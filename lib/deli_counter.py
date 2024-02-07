@@ -29,10 +29,20 @@ def now_serving(katz_deli):
     if len(katz_deli) == 0:
         print("There is nobody waiting to be served!")
     # If there are folks in line it should call out 'Currently serving {name}' then they should be removed from the line
-    if len(katz_deli) > 0:
-        for i in range(len(katz_deli)):
+    else:
+        i = len(katz_deli)
+        while i > 0:
             print(f'Currently serving {katz_deli[0]}.')
             katz_deli.pop(0)
+            i -= 1
+            break
+        # serving_line = []
+        # while i > 0:
+        #     print(f'Currently serving ')
+        #     katz_deli.pop(0)
+        #     i -= 1
+        #     # print(" ".join(serving_line))
+        
 
 
 # now_serving(['Tony', 'Manny', 'Xavi', 'Cathy'])
